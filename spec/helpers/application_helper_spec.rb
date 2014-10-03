@@ -15,4 +15,9 @@ describe ApplicationHelper do
       expect(full_title("")).not_to match(/\|/)
     end
   end
+
+  describe "pluralize" do
+    it { pluralize(1, "micropost").should == "1 micropost" }
+    it { pluralize(2, "micropost").should == "2 microposts" }
+  end
 end
